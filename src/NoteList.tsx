@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Badge, Button, Card, Col, Form, Row, Stack } from "react-bootstrap";
+import { Badge, Button, Card, Col, Form, Modal, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ReactSelect from "react-select"
 import { Tag } from "./App";
@@ -84,6 +84,7 @@ export function NoteList({ availableTags,notes }: NoteListProps){
                 ))
             }
         </Row>
+        <EditTagModal/>
     </>
 }
 
@@ -109,4 +110,12 @@ function NoteCard({id, title, tags}: SimplifiedNote){
             </Stack>
         </Card.Body>
         </Card>
+}
+
+function EditTagsModal(){
+    return <Modal>
+        <Modal.Header closeButton> 
+            <Modal.Title></Modal.Title>
+        </Modal.Header>
+    </Modal>
 }
