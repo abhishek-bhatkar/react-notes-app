@@ -98,7 +98,7 @@ function App() {
     })
   }
 
-  return (
+  return (<>
     <Container className="my-4">
       <Routes>
         <Route 
@@ -119,6 +119,7 @@ function App() {
         <Route path="*" element={ <Navigate to="/"/> }/>
       </Routes>
     </Container>
+    </>
   )
 }
 
